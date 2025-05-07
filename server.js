@@ -3,7 +3,7 @@ import { connectDB } from "./config/db.js";
 import application from "./app.js";
 
 const serever = http.createServer(application);
-const PORTNUM = process.env.PORT || 5000;
+const PORTNUM = process.env.PORTNUM || 5000;
 
 connectDB()
   .then(() => {
