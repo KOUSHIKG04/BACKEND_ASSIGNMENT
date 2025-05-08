@@ -1,5 +1,5 @@
-import Activity from "../models/Activity.js";
-import Booking from "../models/Booking.js";
+import Activity from "../models/activity.js";
+import Booking from "../models/booking.js";
 import { validationResult } from "express-validator";
 
 export const createActivity = async (req, res) => {
