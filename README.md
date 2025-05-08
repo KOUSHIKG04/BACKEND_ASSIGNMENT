@@ -20,10 +20,7 @@ This is a backend API for an activity booking system. It allows users to registe
 
 ## Tech Stack
 
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB (via Mongoose)
-- **Authentication**: JWT (JSON Web Tokens)
-- **Validation**: express-validator
+**Backend**: Node.js, Express.js, **Database**: MongoDB (via Mongoose), **Authentication**: JWT (JSON Web Tokens), **Validation**: express-validator
 
 ## Installation
 
@@ -43,7 +40,7 @@ This is a backend API for an activity booking system. It allows users to registe
    ```
    DATABASE_URL=mongodb://localhost:27017/activity-booking
    JWT_SECRET=your_jwt_secret
-   PORTNUM=5000
+   PORT=5000
    ```
 4. Start the server:
 
@@ -75,7 +72,6 @@ This is a backend API for an activity booking system. It allows users to registe
     "password": "password123"
   }
   ```
-
 
 ### Activities
 
@@ -118,16 +114,32 @@ backend-assignment/
 └── README.md           # Project documentation
 ```
 
-
 ## Dependencies
 
-* `bcryptjs`: For password hashing.
-* `cors`: For handling cross-origin requests.
-* `dotenv`: For environment variable management.
-* `express`: Web framework for Node.js.
-* `express-validator`: For request validation.
-* `jsonwebtoken`: For JWT-based authentication.
-* `mongoose`: For MongoDB object modeling.
+This project relies on several npm packages to provide essential functionality. For secure password hashing, it uses `bcryptjs`, ensuring that user passwords are stored safely. Cross-Origin Resource Sharing (CORS) is handled by the `cors` package, allowing the API to be accessed from different domains. Environment variables are managed securely using `dotenv`, which helps keep sensitive information like database credentials and JWT secrets out of the codebase.
+
+The backend is built on `express`, a fast and minimalist web framework for Node.js, while `express-validator` is used to validate and sanitize incoming requests, ensuring data integrity. For authentication, the project uses `jsonwebtoken` to implement JWT-based authentication, providing secure access to protected routes. Finally, `mongoose` is used for MongoDB object modeling, making it easier to define schemas and interact with the database.
+
+## Deployment
+
+The project is deployed on [Render](vscode-file://vscode-app/c:/Users/KOUSHIK%20G/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html). You can access the live API at:
+
+ **Base URL** :  ` https://backend-assignment-wrqp.onrender.com `
+
+#### Testing the Deployed API
+
+Use tools like Postman or cURL to test the API endpoints. Replace ` http://localhost:3000 ` with your Render URL in the API requests.
+
+
+## Bonus Included
+
+This project includes several additional features to enhance functionality, security, and maintainability:
+
+* **Validation** : The API uses `express-validator` to validate and sanitize incoming requests, ensuring that only valid data is processed.
+* **Password Hashing** : User passwords are securely hashed using `bcryptjs` before being stored in the database, protecting sensitive user information.
+* **Clean Code and Folder Structure** : The project follows a clean and modular folder structure, separating concerns into [routes](vscode-file://vscode-app/c:/Users/KOUSHIK%20G/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html), [controllers](vscode-file://vscode-app/c:/Users/KOUSHIK%20G/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html), and [models](vscode-file://vscode-app/c:/Users/KOUSHIK%20G/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html) for better maintainability and scalability.
+* **Hosting** : The API is deployed on [Render](vscode-file://vscode-app/c:/Users/KOUSHIK%20G/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html), a free hosting platform, making it accessible online.
+* **Comprehensive Documentation** : A detailed [README.md](vscode-file://vscode-app/c:/Users/KOUSHIK%20G/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html) file is provided, including setup instructions, deployment steps, and API endpoint details.
 
 ## License
 
