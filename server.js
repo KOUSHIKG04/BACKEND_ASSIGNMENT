@@ -3,12 +3,12 @@ import { connectDB } from "./config/db.js";
 import application from "./app.js";
 
 const serever = http.createServer(application);
-const PORTNUM = process.env.PORTNUM || 5000;
+const PORT = process.env.PORT || 3000;
 
 connectDB()
   .then(() => {
-    serever.listen(PORTNUM, () => {
-      console.log(`Server running on port ${PORTNUM}!!`);
+    serever.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}!!`);
     });
   })
   .catch((error) => {
